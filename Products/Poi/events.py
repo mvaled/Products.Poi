@@ -107,6 +107,20 @@ def merge_response_changes_to_issue(issue):
     issue.notifyModified()
 
 
+def add_current_user_to_issue_watchers(object, event):
+    '''Adds the current user (if not anoymous) to the watchers list.
+
+    Called by posting a issue, so that poster receive notifications.
+    '''
+    portal_membership = getToolByName(object, 'portal_membership')
+    if not portal_membership.isAnonymousUser():
+        member = portal_membership.getAuthenticatedMember()
+        watchers = list(object.getWatchers())
+        if member.id is not watchers:
+            watchers.append(member.id)
+            object.setWatchers(tuple(watchers))
+
+
 def post_issue(object, event):
     """Finalise posting of an issue.
 
@@ -123,6 +137,7 @@ def post_issue(object, event):
     if portal_membership.isAnonymousUser():
         object.setCreators(('(anonymous)',))
     add_contact_to_issue_watchers(object, event)
+    add_current_user_to_issue_watchers(object, event)
     add_manager_to_issue_watchers(object, event)
     portal_workflow = getToolByName(object, 'portal_workflow')
     portal_workflow.doActionFor(object, 'post')

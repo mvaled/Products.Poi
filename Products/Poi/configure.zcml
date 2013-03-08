@@ -28,17 +28,22 @@
       handler=".events.removedResponse"
       />
 
-  <subscriber
-      for="Products.Poi.interfaces.ITracker
-           Products.Archetypes.interfaces.IObjectInitializedEvent"
-        handler=".events.update_tracker_watchers"
-        />
+  <!-- manu@merchise.org: The following events causes that upon creation or
+       modification of a Tracker (not an Issue) all the manager are made watchers.
 
-  <subscriber
-      for="Products.Poi.interfaces.ITracker
-           Products.Archetypes.interfaces.IObjectEditedEvent"
-        handler=".events.update_tracker_watchers"
-        />
+       So commenting this helps to avoid excess of mails -->
+
+  <!-- <subscriber -->
+  <!--     for="Products.Poi.interfaces.ITracker -->
+  <!--          Products.Archetypes.interfaces.IObjectInitializedEvent" -->
+  <!--       handler=".events.update_tracker_watchers" -->
+  <!--       /> -->
+
+  <!-- <subscriber -->
+  <!--     for="Products.Poi.interfaces.ITracker -->
+  <!--          Products.Archetypes.interfaces.IObjectEditedEvent" -->
+  <!--       handler=".events.update_tracker_watchers" -->
+  <!--       /> -->
 
   <subscriber
       for="Products.Poi.interfaces.IIssue
