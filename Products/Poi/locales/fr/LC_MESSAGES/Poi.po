@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: poi-fr\n"
 "POT-Creation-Date: 2012-04-27 23:58+0000\n"
-"PO-Revision-Date: 2008-06-19 18:09+0200\n"
-"Last-Translator: Kevin Deldycke <kevin@deldycke.com>\n"
+"PO-Revision-Date: 2013-03-15 11:17-0500\n"
+"Last-Translator: Manuel Vázquez Acosta <mva.led@gmail.com>\n"
 "Language-Team: French <membres@traduc.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,17 +24,17 @@ msgstr ""
 #: ./browser/templates/poi_email_new_issue_html.pt:23
 #: ./browser/templates/poi_email_new_issue_plain.pt:8
 msgid "A new issue has been submitted to the ${tracker_title} tracker by ${issue_author} and awaits confirmation."
-msgstr ""
+msgstr "Un nouveau ticket a été ajouté sur le gestionnaire ${tracker_title} par ${issue_author}."
 
 #: ./browser/templates/poi_email_new_response_html.pt:24
 #: ./browser/templates/poi_email_new_response_plain.pt:8
 msgid "A new response has been given to the issue ${issue_title} in the tracker ${tracker_title} by ${response_author}."
-msgstr ""
+msgstr "Le ticket ${issue_title} a été répondu par ${response_author} sur le gestionnaire ${tracker_title}."
 
 #: ./browser/templates/poi_email_new_response_html.pt:42
 #: ./browser/templates/poi_email_new_response_plain.pt:23
 msgid "An attachment has been added with id ${id}."
-msgstr ""
+msgstr "Une pièce jointe a été ajoutée sur le id ${id}"
 
 #: ./browser/response.py:512
 msgid "Changes saved to response id ${response_id}."
@@ -58,18 +58,18 @@ msgstr "Modifier le ticket"
 #: ./browser/templates/poi_email_new_issue_html.pt:29
 #: ./browser/templates/poi_email_resolved_issue_html.pt:31
 msgid "Issue"
-msgstr ""
+msgstr "Ticket"
 
 #: ./browser/templates/poi_email_new_issue_html.pt:35
 #: ./browser/templates/poi_email_new_issue_plain.pt:19
 msgid "Issue Details:"
-msgstr ""
+msgstr "Détails du ticket:"
 
 #: ./browser/templates/poi_email_new_issue_html.pt:27
 #: ./browser/templates/poi_email_new_issue_plain.pt:13
 #: ./browser/templates/poi_email_resolved_issue_html.pt:29
 msgid "Issue Information"
-msgstr ""
+msgstr "Information sur le ticket"
 
 #: ./browser/response.py:408
 msgid "Issue state"
@@ -79,7 +79,7 @@ msgstr "État du ticket"
 #: ./browser/templates/poi_email_new_response_html.pt:31
 #: ./browser/templates/poi_email_new_response_plain.pt:14
 msgid "Issue:"
-msgstr ""
+msgstr "Ticket:"
 
 #: ./browser/response.py:540
 msgid "No response selected for removal."
@@ -485,13 +485,13 @@ msgstr "La réponse « ${response_id} » a été supprimé."
 #: ./browser/templates/poi_email_new_response_html.pt:45
 #: ./browser/templates/poi_email_new_response_plain.pt:25
 msgid "Response Details:"
-msgstr ""
+msgstr "Détails de la réponse:"
 
 #: ./browser/templates/poi_email_new_response_html.pt:29
 #: ./browser/templates/poi_email_new_response_plain.pt:12
 #: ./browser/templates/poi_email_resolved_issue_plain.pt:14
 msgid "Response Information"
-msgstr ""
+msgstr "Information sur la réponse"
 
 #: ./browser/response.py:502
 msgid "Response does not exist anymore; perhaps it was removed by another user."
@@ -551,13 +551,13 @@ msgstr "Distribution cible"
 #: ./browser/templates/poi_email_resolved_issue_html.pt:23
 #: ./browser/templates/poi_email_resolved_issue_plain.pt:8
 msgid "The issue ${issue_title} in the ${tracker_title} tracker has been marked as resolved by ${response_author} Please visit the issue and either confirm that it has been satisfactorily resolved or re-open it."
-msgstr ""
+msgstr "Le ticket ${issue_title} sur le gestionnaire ${tracker_title} a été marqué comme resolu par ${response_author}. Merci de confirmer s'il a été resolu ou non. "
 
 #: ./browser/templates/poi_email_new_issue_html.pt:37
 #: ./browser/templates/poi_email_new_issue_plain.pt:23
 #: ./browser/templates/poi_email_new_response_html.pt:48
 msgid "This is an automated email, please do not reply."
-msgstr ""
+msgstr "Cet e-mail a été envoyé automatiquement. Ne le répondez pas, s'il vous plaît."
 
 #. Default: "Watch this issue"
 #: ./skins/Poi/poi_issue_view.pt:152
